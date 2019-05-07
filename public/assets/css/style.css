@@ -1,17 +1,14 @@
 .title {
-    font-family: 'Stint Ultra Expanded', cursive;
-    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	text-align: center;
 }
 
 html, body{
 	height: 100%;
 }
 body { 
-	background-image: url("") ;
-	background-position: center center;
-	background-repeat:  no-repeat;
-	background-attachment: fixed;
-	background-size:  cover;  
+	background-color: #ebe8d8;  
 }
 
 div, body{

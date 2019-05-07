@@ -1,21 +1,25 @@
-
 <div class="container">
-	<div class="row">
-		<div class="col-md-12 text-center" id="top-bar">
-			{{!-- <img src="/assets/images/burger.png" alt="burger" /> --}}
-			<h1> title! </h1>
+	<header>
+		<div>
+			<h1 class="title">Travel Logs</h1>
 		</div>
-		<div class="col-md-6 text-center" class="task">
+	</header>
+	<div class="row">
+		<div class="col">
+			
+		</div>
+	</div>
+		<div class="col-md-6" class="task">
 			<div class="row">
 			  {{#each travels}}
 			  	{{#unless this.visited}}
-				<div class="col-md-9 text-center">
+				<div class="col">
 					<pre>{{this.id}} . {{this.place_name}}
 					</pre>
 				  		<!-- {{this.Date}} -->
 				</div>
-				<div class="col-md-3 text-center">
-					<form class="devour-form button-size">
+				<div class="col">
+					<form class="btn-size">
 						<input type="hidden" class="" type="text" value={{this.id}}><br>
 						<button type="submit" class="btn btn-default btn-add" data-id={{this.id}}>Go!</button>
 					</form>
@@ -24,7 +28,7 @@
 			  {{/each}}
 			</div>
 		</div>
-		<div class="col-md-6 text-center" class="task">
+		<div class="col-md-6" class="task">
 			  {{#each travels}}
 			  	{{#if this.visited}}
 			  		<input class="form-control" type="text" placeholder="{{this.id}} . {{this.place_name}}" readonly>
@@ -36,7 +40,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12 text-center enter_section">
+		<div class="col enter_section">
 			<form action="/api/places/" method="POST">
 				<input type="text" class="form-control" name="place_name" value="" id="enter_text">
 				<button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
